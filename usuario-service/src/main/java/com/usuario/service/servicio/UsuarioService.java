@@ -22,7 +22,7 @@ public class UsuarioService {
 	private CarroFeignClient carroFeignClient;
 	
 	public List<Carro> getCarros(int usuarioId){
-		List<Carro> carros = restTemplate.getForObject("http://localhost:8002/carro/usuario/"+usuarioId, List.class);
+		List<Carro> carros = restTemplate.getForObject("http://localhost:carro-service/carro/usuario/"+usuarioId, List.class);
 		return carros;
 	}
 	public Carro saveCarro(int usuarioId, Carro carro) {
